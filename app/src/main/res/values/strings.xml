@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Calculator_Android</string>
+    <string name="standard">Standard</string>
+    <string name="nav_height">50dp</string>
+    <string name="text_size">24sp</string>
+    <string name="button_text_size">26sp</string>
+    <string name="margin_right">20dp</string>
+    <string name="matrix_width">98dp</string>
+    <string name="matrix_height">86dp</string>
+    <string name="matrix_gap">3.8dp</string>
+    <string name="matrix_gap_top">-5dp</string>
+    <string name="margin_bottom">-2dp</string>
+    <string name="matrix_gap_bottom">-6dp</string>
+    <string name="view_height">100dp</string>
+    <string name="margin_top_nav">10dp</string>
+    <string name="x">x</string>
+
+</resources>

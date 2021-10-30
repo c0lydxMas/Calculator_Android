@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/DarkGrey"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button_navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="@string/nav_height"
+        android:layout_marginTop="@string/margin_top_nav"
+        android:backgroundTint="@color/DarkGrey"
+        android:drawableLeft="@drawable/ic_navigation"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="@string/nav_height"
+        android:gravity="end|center"
+        android:text="@string/standard"
+        android:layout_marginTop="@string/margin_top_nav"
+        android:textColor="@color/white"
+        android:textSize="@string/text_size"
+        app:layout_constraintLeft_toRightOf="@+id/button_navigation"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_history"
+        android:layout_width="@string/nav_height"
+        android:layout_height="@string/nav_height"
+        android:layout_marginTop="@string/margin_top_nav"
+        android:layout_marginEnd="@string/margin_right"
+        android:backgroundTint="@color/DarkGrey"
+        android:drawableLeft="@drawable/ic_history"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/text_input"
+        android:layout_width="match_parent"
+        android:layout_height="@string/view_height"
+        android:layout_marginEnd="@string/margin_right"
+        android:gravity="end|center"
+        android:text="Text input"
+        android:textColor="@color/white"
+        android:textSize="@string/text_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/result" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="@string/view_height"
+        android:layout_marginEnd="@string/margin_right"
+        android:gravity="end|center"
+        android:text="HARD CODE"
+        android:textColor="@color/white"
+        android:textSize="@string/text_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button_backspace"/>
+
+
+    <!--    Matrix begins-->
+
+    <Button
+        android:id="@+id/button_modulo"
+        android:layout_width="@string/matrix_width"
+        android:layout_height="@string/matrix_height"
+        android:layout_marginLeft="@string/matrix_gap"
+        android:backgroundTint="@android:color/black"
+        android:text="%"
+        android:layout_marginBottom="@string/matrix_gap_bottom"
+        android:textColor="@color/white"
+        android:textSize="@string/button_text_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button_7"
+         />
+
+    <Button
+        android:id="@+id/button_ce"
+        android:layout_width="@string/matrix_width"
+        android:layout_height="@string/matrix_height"
+        android:layout_marginLeft="@string/matrix_gap"
+        android:layout_marginRight="@string/matrix_gap"
+        android:backgroundTint="@android:color/black"
+        android:layout_marginBottom="@string/matrix_gap_bottom"
+        android:text="CE"
+        android:textColor="@color/white"
+        android:textSize="@string/button_text_size"
+        app:layout_constraintLeft_toRightOf="@+id/button_modulo"
+        app:layout_constraintBottom_toTopOf="@+id/button_8"
+         />
+
+    <Button
+        android:id="@+id/button_c"
+        android:layout_width="@string/matrix_width"
+        android:layout_height="@string/matrix_height"
+        android:layout_marginBottom="@string/matrix_gap_bottom"
+        android:layout_marginLeft="@string/matrix_gap"
+        android:layout_marginRight="@string/matrix_gap"
+        android:backgroundTint="@android:color/black"
+        android:text="C"
+        android:textColor="@color/white"
+        android:textSize="@string/button_text_size"
+        app:layout_constraintLeft_toRightOf="@+id/button_ce"
+        app:layout_constraintBottom_toTopOf="@+id/button_9"
+        />
+
+    <Button
+        android:id="@+id/button_backspace"
+        android:layout_width="@string/matrix_width"
+        android:layout_height="@string/matrix_height"
+        android:layout_marginLeft="@string/matrix_gap"
+        android:layout_marginBottom="@string/matrix_gap_bottom"
+        android:layout_marginRight="@string/matrix_gap"
+        android:backgroundTint="@android:color/black"
+        android:drawableLeft="@drawable/ic_backspace"
+        android:paddingLeft="35dp"
+        android:textColor="@color/white"
+        android:textSize="@string/button_text_size"
+        app:layout_constraintLeft_toRightOf="@+id/button_c"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button_x"
+         />
+
+    <!-- second row -->
+
+    <Button
+        android:id="@+id/button_7"
+        android:layout_width="@string/matrix_width"
+        android:layout_height="@string/matrix_height"
+        android:layout_marginLeft="@string/matrix_gap"
+        android:backgroundTint="@android:color/black"
+        android:layout_marginBottom="@string/matrix_gap_bottom"
+        android:text="7"
+        android:textColor="@color/white"
+        android:textSize="@string/button_text_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button_4"
+         />
+
+    <Button
+        android:id="@+id/button_8"
+        android:layout_width="@string/matrix_width"
+        android:layout_height="@string/matrix_height"
+        android:layout_marginStart="@string/matrix_gap"
+        android:backgroundTint="@android:color/black"
+        android:layout_marginBottom="@string/matrix_gap_bottom"
+        android:text="8"
+        android:textColor="@color/white"
+        android:textSize="@string/button_text_size"
+        app:layout_constraintLeft_toRightOf="@+id/button_7"
+        app:layout_constraintBottom_toTopOf="@+id/button_5"
+         />
+
+    <Button
+        android:id="@+id/button_9"
+        android:layout_width="@string/matrix_width"
+        android:layout_height="@string/matrix_height"
+        android:layout_marginLeft="@string/matrix_gap"
+        android:layout_marginBottom="@string/matrix_gap_bottom"
+        android:backgroundTint="@android:color/black"
+        android:text="9"
+        android:textColor="@color/white"
+        android:textSize="@string/button_text_size"
+        app:layout_constraintLeft_toRightOf="@+id/button_8"
+        app:layout_constraintBottom_toTopOf="@+id/button_6"
+         />
+
+    <Button
+        android:id="@+id/button_x"
+        android:layout_width="@string/matrix_width"
+        android:layout_height="@string/matrix_height"
+        android:layout_marginLeft="@string/matrix_gap"
+        android:layout_marginBottom="@string/matrix_gap_bottom"
+        android:layout_marginRight="@string/matrix_gap"
+        android:backgroundTint="@android:color/black"
+        android:text="@string/x"
+        android:textColor="@color/white"
+        android:textSize="@string/button_text_size"
+        app:layout_constraintLeft_toRightOf="@+id/button_9"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button_minus"
+        />
+
+    <!-- third row -->
+
+    <Button
+        android:id="@+id/button_4"
+        android:layout_width="@string/matrix_width"
+        android:layout_height="@string/matrix_height"
+        android:layout_marginBottom="@string/matrix_gap_bottom"
+        android:layout_marginLeft="@string/matrix_gap"
+        android:backgroundTint="@android:color/black"
+        android:text="4"
+        android:textColor="@color/white"
+        android:textSize="@string/button_text_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+         app:layout_constraintBottom_toTopOf="@+id/button_1"
+        />
+
+    <Button
+        android:id="@+id/button_5"
+        android:layout_width="@string/matrix_width"
+        android:layout_height="@string/matrix_height"
+        android:layout_marginStart="@string/matrix_gap"
+        android:layout_marginBottom="@string/matrix_gap_bottom"
+        android:backgroundTint="@android:color/black"
+        android:text="5"
+        android:textColor="@color/white"
+        android:textSize="@string/button_text_size"
+        app:layout_constraintLeft_toRightOf="@+id/button_4"
+        app:layout_constraintBottom_toTopOf="@+id/button_2" />
+
+    <Button
+        android:id="@+id/button_6"
+        android:layout_width="@string/matrix_width"
+        android:layout_height="@string/matrix_height"
+        android:layout_marginBottom="@string/matrix_gap_bottom"
+        android:layout_marginLeft="@string/matrix_gap"
+        android:backgroundTint="@android:color/black"
+        android:text="6"
+        android:textColor="@color/white"
+        android:textSize="@string/button_text_size"
+        app:layout_constraintLeft_toRightOf="@+id/button_5"
+        app:layout_constraintBottom_toTopOf="@+id/button_3"/>
+
+    <Button
+        android:id="@+id/button_minus"
+        android:layout_width="@string/matrix_width"
+        android:layout_height="@string/matrix_height"
+        android:layout_marginLeft="@string/matrix_gap"
+        android:layout_marginBottom="@string/matrix_gap_bottom"
+        android:layout_marginRight="@string/matrix_gap"
+        android:backgroundTint="@android:color/black"
+        android:text="-"
+        android:textColor="@color/white"
+        android:textSize="@string/button_text_size"
+        app:layout_constraintLeft_toRightOf="@+id/button_6"
+        app:layout_constraintRight_toRightOf="parent"
+         app:layout_constraintBottom_toTopOf="@+id/button_add"/>
+
+    <!-- 4th row -->
+    <Button
+        android:id="@+id/button_1"
+        android:layout_width="@string/matrix_width"
+        android:layout_height="@string/matrix_height"
+        android:layout_marginLeft="@string/matrix_gap"
+        android:layout_marginBottom="@string/matrix_gap_bottom"
+        android:backgroundTint="@android:color/black"
+        android:text="1"
+        android:textColor="@color/white"
+        android:textSize="@string/button_text_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button_reverse" />
+
+    <Button
+        android:id="@+id/button_2"
+        android:layout_width="@string/matrix_width"
+        android:layout_height="@string/matrix_height"
+        android:layout_marginBottom="@string/matrix_gap_bottom"
+        android:layout_marginStart="@string/matrix_gap"
+        android:backgroundTint="@android:color/black"
+        android:text="2"
+        android:textColor="@color/white"
+        android:textSize="@string/button_text_size"
+        app:layout_constraintLeft_toRightOf="@+id/button_1"
+        app:layout_constraintBottom_toTopOf="@+id/button_0" />
+
+    <Button
+        android:id="@+id/button_3"
+        android:layout_width="@string/matrix_width"
+        android:layout_height="@string/matrix_height"
+        android:layout_marginLeft="@string/matrix_gap"
+        android:layout_marginBottom="@string/matrix_gap_bottom"
+        android:backgroundTint="@android:color/black"
+        android:text="3"
+        android:textColor="@color/white"
+        android:textSize="@string/button_text_size"
+        app:layout_constraintLeft_toRightOf="@+id/button_2"
+        app:layout_constraintBottom_toTopOf="@+id/button_dot" />
+
+    <Button
+        android:id="@+id/button_add"
+        android:layout_width="@string/matrix_width"
+        android:layout_height="@string/matrix_height"
+        android:layout_marginLeft="@string/matrix_gap"
+        android:layout_marginRight="@string/matrix_gap"
+        android:backgroundTint="@android:color/black"
+        android:layout_marginBottom="@string/matrix_gap_bottom"
+        android:text="+"
+        android:textColor="@color/white"
+        android:textSize="@string/button_text_size"
+        app:layout_constraintLeft_toRightOf="@+id/button_3"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button_equal" />
+
+    <!-- 5th row (last row) -->
+
+    <Button
+        android:id="@+id/button_reverse"
+        android:layout_width="@string/matrix_width"
+        android:layout_height="@string/matrix_height"
+        android:layout_marginLeft="@string/matrix_gap"
+        android:backgroundTint="@android:color/black"
+        android:text="+/-"
+        android:textColor="@color/white"
+        android:textSize="@string/button_text_size"
+        android:layout_marginBottom="@string/margin_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+         />
+
+    <Button
+        android:id="@+id/button_0"
+        android:layout_width="@string/matrix_width"
+        android:layout_height="@string/matrix_height"
+        android:layout_marginStart="@string/matrix_gap"
+        android:backgroundTint="@android:color/black"
+        android:text="0"
+        android:textColor="@color/white"
+        android:layout_marginBottom="@string/margin_bottom"
+        android:textSize="@string/button_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/button_reverse"
+         />
+
+    <Button
+        android:id="@+id/button_dot"
+        android:layout_width="@string/matrix_width"
+        android:layout_height="@string/matrix_height"
+        android:layout_marginLeft="@string/matrix_gap"
+        android:backgroundTint="@android:color/black"
+        android:text="."
+        android:textColor="@color/white"
+        android:textSize="@string/button_text_size"
+        android:layout_marginBottom="@string/margin_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/button_0"
+       />
+
+    <Button
+        android:id="@+id/button_equal"
+        android:layout_width="@string/matrix_width"
+        android:layout_height="@string/matrix_height"
+        android:layout_marginLeft="@string/matrix_gap"
+        android:layout_marginRight="@string/matrix_gap"
+        android:backgroundTint="@android:color/black"
+        android:text="="
+        android:textColor="@color/white"
+        android:textSize="@string/button_text_size"
+        android:layout_marginBottom="@string/margin_bottom"
+        app:layout_constraintLeft_toRightOf="@+id/button_dot"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
