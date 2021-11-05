@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Calculator_Android</string>
+    <string name="app_name">Calculator</string>
     <string name="standard">Standard</string>
     <string name="nav_height">50dp</string>
     <string name="text_size">24sp</string>
